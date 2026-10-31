@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Little Surprise for You ♡</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="hearts" aria-hidden="true">
+    <span>♡</span><span>♡</span><span>♡</span>
+    <span>♡</span><span>♡</span><span>♡</span>
+  </div>
+
+  <main class="container">
+
+    <!-- 1. WELCOME -->
+    <section id="welcome" class="screen active">
+      <div class="card">
+        <div class="big-heart">♡</div>
+        <p class="eyebrow">A LITTLE SOMETHING FOR YOU</p>
+        <h1>A Little Surprise<br>for You</h1>
+        <p class="message">
+          I made something special for you. It's a little collection
+          of surprises, memories, and words from the heart.
+          Take your time and enjoy every moment. ♡
+        </p>
+        <button class="primary" id="startBtn">Start the Surprise ♡</button>
+      </div>
+    </section>
+
+    <!-- 2. SECRET QUESTION -->
+    <section id="question" class="screen">
+      <div class="card">
+        <p class="eyebrow">A LITTLE QUESTION</p>
+        <h2>What makes our relationship special? ♡</h2>
+        <div class="choices">
+          <button class="choice">The little moments we share</button>
+          <button class="choice">The way we understand each other</button>
+          <button class="choice">The love and care we give</button>
+          <button class="choice">All of these, and so much more ♡</button>
+        </div>
+        <p id="questionFeedback" class="feedback"></p>
+        <button class="primary hidden" id="questionNext">Continue ♡</button>
+      </div>
+    </section>
+
+    <!-- 3. PHOTO PUZZLE -->
+    <section id="puzzle" class="screen">
+      <div class="card">
+        <p class="eyebrow">A LITTLE CHALLENGE</p>
+        <h2>Complete Our Picture ♡</h2>
+        <p class="message">
+          Complete this 3×3 puzzle to unlock the next surprise.
+          Tap a tile beside the empty space to move it.
+        </p>
+
+        <div id="puzzleBoard" class="puzzle-board"></div>
+        <p id="puzzleStatus" class="feedback">Let's solve it!</p>
+        <button class="secondary" id="shufflePuzzle">Shuffle Again</button>
+        <button class="primary hidden" id="puzzleNext">Continue ♡</button>
+      </div>
+    </section>
+
+    <!-- 4. FLOWER REVEAL GAME -->
+    <section id="audio" class="screen">
+      <div class="card">
+        <p class="eyebrow">A LITTLE SURPRISE FOR YOU</p>
+        <h2>Reveal the Flowers ♡</h2>
+
+        <p class="message">
+          There is something beautiful hiding underneath.
+          Drag the objects away to uncover your surprise!
+        </p>
+
+        <div class="flower-instructions">
+          <span>💗</span>
+          <p>Drag each object outside the picture area to reveal the flowers.</p>
+        </div>
+
+        <!-- Flower picture and draggable objects -->
+        <div id="flowerBoard" class="flower-board">
+
+          <!-- Temporary flower image placeholder -->
+          <div id="flowerPhoto" class="flower-photo">
+            <div class="temporary-bouquet">
+              <span>💐</span>
+              <p>A bouquet just for you</p>
+            </div>
+          </div>
+
+          <!-- Objects covering the flower picture -->
+          <button class="cover-object" type="button">🎀</button>
+          <button class="cover-object" type="button">🧸</button>
+          <button class="cover-object" type="button">⭐</button>
+          <button class="cover-object" type="button">💌</button>
+          <button class="cover-object" type="button">🎁</button>
+          <button class="cover-object" type="button">🦋</button>
+          <button class="cover-object" type="button">💗</button>
+          <button class="cover-object" type="button">🌸</button>
+          <button class="cover-object" type="button">🍓</button>
+          <button class="cover-object" type="button">✨</button>
+          <button class="cover-object" type="button">🎀</button>
+          <button class="cover-object" type="button">🧸</button>
+          <button class="cover-object" type="button">💌</button>
+          <button class="cover-object" type="button">⭐</button>
+          <button class="cover-object" type="button">🌷</button>
+          <button class="cover-object" type="button">🎁</button>
+          <button class="cover-object" type="button">🦋</button>
+          <button class="cover-object" type="button">💗</button>
+          <button class="cover-object" type="button">🌸</button>
+          <button class="cover-object" type="button">🍓</button>
+          <button class="cover-object" type="button">✨</button>
+          <button class="cover-object" type="button">🎀</button>
+          <button class="cover-object" type="button">🧸</button>
+          <button class="cover-object" type="button">💌</button>
+          <button class="cover-object" type="button">⭐</button>
+          <button class="cover-object" type="button">🌷</button>
+          <button class="cover-object" type="button">🎁</button>
+          <button class="cover-object" type="button">🦋</button>
+        </div>
+
+        <p id="flowerStatus" class="feedback">
+          Objects remaining: 28
+        </p>
+
+        <div id="flowerMessage" class="hidden">
+          <h2>You found the flowers! 💐</h2>
+          <p class="message">
+            A bouquet for someone as special as you.
+            I hope this makes you smile. ♡
+          </p>
+        </div>
+
+        <button class="primary hidden" id="audioNext">
+          Continue to My Letter ♡
+        </button>
+      </div>
+    </section>
+
+    <!-- 5. LOVE LETTER -->
+    <section id="letter" class="screen">
+      <div class="card">
+        <p class="eyebrow">SOMETHING FROM MY HEART</p>
+        <h2>A Letter for You ♡</h2>
+
+        <div id="envelope" class="envelope">
+          <div class="envelope-heart">💌</div>
+          <p>Open your letter</p>
+          <button class="primary" id="openLetter">Open Letter ♡</button>
+        </div>
+
+        <div id="letterContent" class="letter-content hidden">
+          <h3>Bebe ko,</h3>
+          <p>
+            Hindi ko man palaging nasasabi, gusto kong malaman mo
+            kung gaano ako kasaya at ka-thankful na dumating ka
+            sa buhay ko.
+          </p>
+          <p>
+            Thank you for being part of my ordinary days and making
+            them feel special. Sa simpleng kwentuhan, tawanan,
+            kulitan, at kahit sa mga tahimik na moments natin,
+            I always find reasons to appreciate you.
+          </p>
+          <p>
+            Hindi man perfect ang lahat, I hope we continue choosing
+            each other, understanding each other, and growing together.
+          </p>
+          <p>
+            Gusto kong makasama ka sa marami pang memories,
+            adventures, at little moments na magiging special stories
+            natin someday.
+          </p>
+          <h3>I love you, always. ♡</h3>
+          <p class="signature">Yours, always.</p>
+        </div>
+
+        <button class="primary hidden" id="letterNext">Continue ♡</button>
+      </div>
+    </section>
+
+    <!-- 6. GIFT MACHINE -->
+    <section id="machine" class="screen">
+      <div class="card">
+        <p class="eyebrow">A LITTLE MYSTERY</p>
+        <h2>Choose Your Gift Capsule ♡</h2>
+        <p class="message">
+          Choose one capsule. You never know what surprise
+          is waiting inside!
+        </p>
+
+        <div class="capsules">
+          <button class="capsule" data-gift="A Little Memory ♡">💗<small>Capsule 1</small></button>
+          <button class="capsule" data-gift="A Special Message 💌">💜<small>Capsule 2</small></button>
+          <button class="capsule" data-gift="One More Surprise 🎁">🩷<small>Capsule 3</small></button>
+        </div>
+
+        <p id="giftResult" class="feedback">Pick your mystery capsule!</p>
+        <button class="primary hidden" id="machineNext">Continue ♡</button>
+      </div>
+    </section>
+
+    <!-- 7. FINAL REVEAL -->
+    <section id="final" class="screen">
+      <div class="card">
+        <p class="eyebrow">ONE LAST SURPRISE</p>
+        <h1>Your Final Gift ♡</h1>
+        <div class="gift-box" id="giftBox">🎁</div>
+        <p class="message">
+          This one is not just a virtual gift.
+          I prepared something special for you.
+        </p>
+
+        <button class="primary" id="unwrapBtn">Unwrap Your Surprise! 🎁</button>
+
+        <div id="finalMessage" class="final-message hidden">
+          <h2>Surprise! ♡</h2>
+          <p>
+            I have something special for you.
+            Your real gift is waiting!
+            I can't wait to see your smile.
+          </p>
+          <h2>Come and Get Your Gift! 💗</h2>
+          <p class="signature">With all my love, always.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>Made with love ♡</footer>
+  </main>
+
+  <audio id="backgroundMusic" loop>
+    <source src="assets/audio/background.mp3" type="audio/mpeg">
+  </audio>
+
+  <button id="musicToggle" class="music-button">
+    ♫ Play Music
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
